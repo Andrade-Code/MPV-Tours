@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Turístico</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guia Turístico</h1>
+        <!-- Cadastro de turistas -->
+        <section id="cadastro-turistas">
+            <h2>Cadastro de Turistas</h2>
+            <form id="form-turista">
+                <div class="form-group">
+                    <label for="nome-turista">Nome:</label>
+                    <input type="text" id="nome-turista" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nif-turista">NIF:</label>
+                    <input type="text" id="nif-turista" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-turista">Email:</label>
+                    <input type="email" id="email-turista" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone-turista">Telefone:</label>
+                    <input type="tel" id="telefone-turista" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar Turista</button>
+            </form>
+        </section>
+
+        <!-- Cadastro de guias -->
+        <section id="cadastro-guias">
+            <h2>Cadastro de Guias</h2>
+            <form id="form-guia">
+                <div class="form-group">
+                    <label for="nome-guia">Nome:</label>
+                    <input type="text" id="nome-guia" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nif-guia">NIF:</label>
+                    <input type="text" id="nif-guia" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-guia">Email:</label>
+                    <input type="email" id="email-guia" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="ano-inicio">Ano de Início:</label>
+                    <input type="number" id="ano-inicio" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar Guia</button>
+            </form>
+        </section>
+
+        <!-- Cadastro de pontos de interesse -->
+        <section id="cadastro-pontos">
+            <h2>Cadastro de Pontos de Interesse</h2>
+            <form id="form-ponto">
+                <div class="form-group">
+                    <label for="nome-ponto">Nome:</label>
+                    <input type="text" id="nome-ponto" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao-ponto">Descrição:</label>
+                    <textarea id="descricao-ponto" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="latitude-ponto">Latitude:</label>
+                    <input type="number" step="0.0001" id="latitude-ponto" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="longitude-ponto">Longitude:</label>
+                    <input type="number" step="0.0001" id="longitude-ponto" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar Ponto de Interesse</button>
+            </form>
+        </section>
+
+        <!-- Atribuição de percurso -->
+        <section id="atribui-percurso">
+            <h2>Atribuição de Percurso</h2>
+            <form id="form-percurso">
+                <div class="form-group">
+                    <label for="turista-percurso">Turista:</label>
+                    <select id="turista-percurso" class="form-control" required>
+                        <!-- Turistas cadastrados serão preenchidos dinamicamente -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guia-percurso">Guia:</label>
+                    <select id="guia-percurso" class="form-control" required>
+                        <!-- Guias cadastrados serão preenchidos dinamicamente -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao-percurso">Descrição do Percurso:</label>
+                    <textarea id="descricao-percurso" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pontos-percurso">Pontos de Interesse:</label>
+                    <select id="pontos-percurso" class="form-control" multiple required>
+                        <!-- Pontos de interesse cadastrados serão preenchidos dinamicamente -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Criar Percurso</button>
+            </form>
+        </section>
+
+        <!-- Lista de percursos -->
+        <section id="lista-percursos">
+            <h2>Lista de Percursos</h2>
+            <form id="form-lista-percursos">
+                <div class="form-group">
+                    <label for="turista-lista">Selecione o Turista:</label>
+                    <select id="turista-lista" class="form-control" required>
+                        <!-- Turistas cadastrados serão preenchidos dinamicamente -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Mostrar Percursos</button>
+            </form>
+
+            <div id="percursos">
+                <!-- Lista de percursos será preenchida dinamicamente -->
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
